@@ -1,12 +1,12 @@
 import express from "express";
-import Article from "../models/Article.js"; // ojo: revisa si tu archivo tiene extensión .js
+import Article from "../models/Article.js"; 
 
 const router = express.Router();
 
 // Crear artículo
 router.post("/", async (req, res) => {
   try {
-    const articulo = new Article(req.body); // aquí estaba el detalle
+    const articulo = new Article(req.body); 
     await articulo.save();
     res.status(201).json(articulo);
   } catch (error) {
@@ -20,7 +20,7 @@ router.post("/", async (req, res) => {
 // Obtener todos los artículos
 router.get("/", async (req, res) => {
   try {
-    const articulos = await Article.find(); // mismo fix aquí
+    const articulos = await Article.find(); 
     res.json(articulos);
   } catch (error) {
     res.status(500).json({

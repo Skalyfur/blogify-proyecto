@@ -1,7 +1,7 @@
 <template>
   <div class="layout-container">
     <aside class="sidebar">
-      <h2 @click="$router.push('/')">📰 Blogify</h2>
+      <h2 @click="$router.push('/')">Blogify</h2>
       <nav>
         <ul>
           <li @click="$router.push('/')">Inicio</li>
